@@ -32,7 +32,7 @@ $ yarn install
 # Inicializar o projeto
 $ yarn start
 ```
-## :react: Dependencias:
+## :abc: Dependencias:
 
 $yarn add @babel/cli
 $yarn add @babel/preset-env
