@@ -7,7 +7,7 @@
 </p>
  <h2></h2>
  <br>
-<p align="center"> <img src="/infoAssets/bannerCurso.svg" ></p></br>
+<p align="center"> <img src="/infoAssets/bannerCurso.png" ></p></br>
  
 
 ## 💻 Desafios:
@@ -35,7 +35,9 @@ $ yarn start
 ## :abc: Dependencias:
 
 $yarn add @babel/cli
+
 $yarn add @babel/preset-env
+
 $ yarn add @babel/core
 
 ---------------------------------------------------------------------------------------
