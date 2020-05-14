@@ -1,5 +1,11 @@
 "use strict";
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
@@ -32,8 +38,7 @@ var List = /*#__PURE__*/function () {
   _createClass(List, [{
     key: "add",
     value: function add(data) {
-      this.data.push(data);
-      console.log(this.data);
+      this.data.push(data); // console.log(this.data);
     }
   }]);
 
@@ -59,3 +64,91 @@ var MinhaLista = new TodoList();
 document.querySelector('#novotodo').onclick = function () {
   MinhaLista.add('Novo todo');
 };
+/** Exercício 1 */
+
+
+var Usuario = /*#__PURE__*/function () {
+  function Usuario(email, senha) {
+    _classCallCheck(this, Usuario);
+
+    this.email = email;
+    this.senha = senha;
+  }
+
+  _createClass(Usuario, [{
+    key: "isAdmin",
+    value: function isAdmin() {
+      return this.admin === true;
+    }
+  }]);
+
+  return Usuario;
+}();
+
+var Admin = /*#__PURE__*/function (_Usuario) {
+  _inherits(Admin, _Usuario);
+
+  var _super2 = _createSuper(Admin);
+
+  function Admin() {
+    var _this;
+
+    _classCallCheck(this, Admin);
+
+    _this = _super2.call(this);
+    _this.admin = true;
+    return _this;
+  }
+
+  return Admin;
+}(Usuario);
+
+var User1 = new Usuario('email@teste.com', 'senha123');
+var Adm1 = new Admin('email@teste.com', 'senha123');
+console.log(User1.isAdmin()); // false
+
+console.log(Adm1.isAdmin());
+/** Fim exercício 1 */
+
+/**Exercício 2 */
+
+var usuarios = [{
+  nome: 'Diego',
+  idade: 23,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Gabriel',
+  idade: 15,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Lucas',
+  idade: 30,
+  empresa: 'Facebook'
+}];
+/**2.1 map */
+
+var age = usuarios.map(function (ages) {
+  return ages.idade;
+});
+/** 2.2 filter */
+
+var rocketUsers = usuarios.filter(function (users) {
+  return users.idade > 18 && users.empresa === 'Rocketseat';
+});
+/**2.3 find */
+
+var googleUsers = usuarios.find(function (user) {
+  return user.empresa === 'Google';
+});
+/**2.4 map + filter */
+
+var futureUsers = usuarios.map(function (users) {
+  return _objectSpread(_objectSpread({}, users), {}, {
+    idade: users.idade * 2
+  });
+});
+var less50Users = futureUsers.filter(function (users) {
+  return users.idade < 51;
+});
+console.log(less50Users);
+/** FIM Exercício 2*/
