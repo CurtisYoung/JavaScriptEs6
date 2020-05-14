@@ -40,6 +40,8 @@ $yarn add @babel/preset-env
 
 $ yarn add @babel/core
 
+$ yarn add @babel/plugin-proposal-object-rest-spread
+
 ---------------------------------------------------------------------------------------
 **&copy;  [Rocketseat](https://rocketseat.com.br/)**
 
