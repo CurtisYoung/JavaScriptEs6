@@ -189,9 +189,108 @@ var promise = function promise() {
   return new Promise(function (resolve, reject) {
     return resolve("Array Function");
   });
+}; //promise().then(response => (console.log(response)));
+
+/** FIM Exercício 3*/
+
+/**Exercício 4 */
+
+/** 4.1 */
+
+
+var empresa = {
+  nomeEmpresa: 'Rocketseat',
+  endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC'
+  }
+};
+var nomeEmpresa = empresa.nomeEmpresa,
+    _empresa$endereco = empresa.endereco,
+    cidade = _empresa$endereco.cidade,
+    estado = _empresa$endereco.estado;
+console.log(nomeEmpresa); // Rocketseat
+
+console.log(cidade); // Rio do Sul
+
+console.log(estado); // SC
+
+/** 4.2 */
+
+function mostraInfo(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  return console.log("".concat(nome, " tem ").concat(idade, " anos."));
+}
+
+mostraInfo({
+  nome: 'Diego',
+  idade: 23
+});
+/** FIM Exercício 4*/
+
+/**Exercício 5 */
+
+/** 5.1 */
+
+var newArr = [1, 2, 3, 4, 5, 6];
+var x = newArr[0],
+    y = newArr.slice(1); // function soma...
+
+var soma = function soma() {
+  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+    params[_key] = arguments[_key];
+  }
+
+  return params.reduce(function (total, next) {
+    return total + next;
+  });
 };
 
-promise().then(function (response) {
-  return console.log(response);
+console.log(soma(1, 2, 3, 4, 5, 6)); // 21
+
+console.log(soma(1, 2)); // 3
+
+/** 5.2 */
+
+var spreadUsuario = {
+  nome: 'Diego',
+  idade: 23,
+  endereco: {
+    cidade: 'Rio do Sul',
+    uf: 'SC',
+    pais: 'Brasil'
+  }
+};
+
+var spreadUsuario2 = _objectSpread(_objectSpread({}, spreadUsuario), {}, {
+  nome: 'Gabriel'
 });
-/** FIM Exercício 3*/
+
+var spreadUsuario3 = _objectSpread(_objectSpread({}, spreadUsuario), {}, {
+  endereco: {
+    cidade: 'Lontras'
+  }
+});
+
+console.log(spreadUsuario3);
+/**FIM Exercício 5 */
+
+/** Exercício 6 */
+
+var usuarioLts = 'Diego';
+var idadeLts = 23;
+console.log("O usu\xE1rio ".concat(usuarioLts, " possui ").concat(idadeLts, " anos"));
+/**FIM Exercício 6 */
+
+/** Exercício 7 */
+
+var nomeOss = 'Curtis';
+var idadeOss = 29;
+var usuarioOss = {
+  nomeOss: nomeOss,
+  idadeOss: idadeOss,
+  cidade: 'Rio do Sul'
+};
+console.log(usuarioOss);
+/** FIM Exercício 7 */

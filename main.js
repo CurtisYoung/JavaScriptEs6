@@ -102,7 +102,92 @@ mostraUsuario(nome);
 // 3.4
 const promise = ()=> new Promise((resolve, reject)=>resolve("Array Function"));
    
-promise().then(response => (console.log(response)));
+//promise().then(response => (console.log(response)));
 
 
 /** FIM Exercício 3*/
+
+
+/**Exercício 4 */
+
+/** 4.1 */
+const empresa = {
+    nomeEmpresa: 'Rocketseat',
+    endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC',
+    }
+   };
+
+const {nomeEmpresa, endereco:{cidade,estado}} = empresa;
+
+console.log(nomeEmpresa); // Rocketseat
+console.log(cidade); // Rio do Sul
+console.log(estado); // SC
+
+
+/** 4.2 */
+function mostraInfo({nome,idade}) {
+    return console.log(`${nome} tem ${idade} anos.`);
+   }
+mostraInfo({ nome: 'Diego', idade: 23 })
+
+/** FIM Exercício 4*/
+
+/**Exercício 5 */
+
+/** 5.1 */
+const newArr = [1, 2, 3, 4, 5, 6];
+
+const [x , ...y] = newArr;
+
+
+// function soma...
+
+const soma = (...params) => (
+    params.reduce((total, next) => total+next )
+);
+
+console.log(soma(1, 2, 3, 4, 5, 6)); // 21
+console.log(soma(1, 2)); // 3
+
+
+/** 5.2 */
+const spreadUsuario = {
+    nome: 'Diego',
+    idade: 23,
+    endereco: {
+    cidade: 'Rio do Sul',
+    uf: 'SC',
+    pais: 'Brasil',
+    }
+   };
+ 
+const spreadUsuario2 = {...spreadUsuario, nome:'Gabriel'};
+
+const spreadUsuario3 = {...spreadUsuario, endereco:{cidade:'Lontras'}}
+
+console.log(spreadUsuario3);
+
+/**FIM Exercício 5 */
+
+/** Exercício 6 */
+const usuarioLts = 'Diego';
+const idadeLts = 23;
+console.log(`O usuário ${usuarioLts} possui ${idadeLts} anos`);
+
+/**FIM Exercício 6 */
+
+/** Exercício 7 */
+const nomeOss = 'Curtis';
+const idadeOss = 29;
+
+const usuarioOss = {
+ nomeOss,
+ idadeOss,
+ cidade: 'Rio do Sul',
+};
+
+console.log(usuarioOss);
+
+/** FIM Exercício 7 */
