@@ -152,3 +152,46 @@ var less50Users = futureUsers.filter(function (users) {
 });
 console.log(less50Users);
 /** FIM Exercício 2*/
+
+/**Exercício 3 */
+// 3.1
+
+var arr = [1, 2, 3, 4, 5];
+var sumForTen = arr.map(function (item) {
+  return item + 10;
+}); // 3.2
+
+var usuario = {
+  nome: 'Diego',
+  idade: 23
+};
+
+var mostraIdade = function mostraIdade(usuario) {
+  return usuario.idade;
+};
+
+console.log(mostraIdade(usuario)); // 3.3
+// Dica: Utilize uma constante pra function
+
+var nome = "Diego";
+var idade = 23;
+
+var mostraUsuario = function mostraUsuario() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return nome, idade;
+};
+
+mostraUsuario(nome, idade);
+mostraUsuario(nome); // 3.4
+
+var promise = function promise() {
+  return new Promise(function (resolve, reject) {
+    return resolve("Array Function");
+  });
+};
+
+promise().then(function (response) {
+  return console.log(response);
+});
+/** FIM Exercício 3*/
