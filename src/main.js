@@ -1,3 +1,11 @@
+import * as exercise01 from './exercise01';
+import ClasseUsuario, {idade as IdadeUsuario} from './functions';
+
+
+
+
+ClasseUsuario.info();
+console.log(IdadeUsuario);
 class List {
     constructor(){
         this.data = [];
@@ -5,7 +13,7 @@ class List {
 
     add(data){
         this.data.push(data);
-       // console.log(this.data);
+        console.log(this.data);
     }
 }
 
