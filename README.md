@@ -33,17 +33,21 @@ $ yarn install
 $ yarn start
 ```
 ## :abc: Dependencias:
-
-$yarn add @babel/cli
-
-$yarn add @babel/preset-env
-
-$ yarn add @babel/core
-
-$ yarn add @babel/plugin-proposal-object-rest-spread
+<ul>
+    <li>@babel/cli</li>
+    <li>@babel/preset-env</li>
+    <li> @babel/core</li>
+    <li>@babel/plugin-proposal-object-rest-spread</li>
+    <li>@babel/preset-env</li>
+    <li>babel-loader</li>
+    <li>webpack</li>
+    <li>webpack-cli</li>
+    <li>webpack-dev-server</li>
+</ul>
+ 
 
 ---------------------------------------------------------------------------------------
-**&copy;  [Rocketseat](https://rocketseat.com.br/)**
+**&copy;  [Rocketseat](https://rocketseat.com.br/)**  :rocket:
 
 <h4 align="center">  <a href="https://github.com/CurtisYoung" target="_blank"> Curtis Young</a> </h4>
 
