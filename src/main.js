@@ -1,11 +1,12 @@
-import * as exercise01 from './exercise01';
-import ClasseUsuario, {idade as IdadeUsuario} from './functions';
+//import * as exercise01 from './exercise01';
+//import ClasseUsuario, {idade as IdadeUsuario} from './functions';
+import * as exercise03 from './exercise03';
 
 
 
 
-ClasseUsuario.info();
-console.log(IdadeUsuario);
+//ClasseUsuario.info();
+//console.log(IdadeUsuario);
 class List {
     constructor(){
         this.data = [];
